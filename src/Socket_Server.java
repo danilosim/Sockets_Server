@@ -44,7 +44,6 @@ public class Socket_Server {
             do {
                 st = bufferDeEntrada.readUTF();
                 System.out.println("\nCliente => " + st);
-                System.out.print("\nServidor => ");
             } while (!st.equals(COMANDO_TERMINACION));
         } catch (IOException ignored) {
         }
@@ -65,7 +64,6 @@ public class Socket_Server {
     private void escribirDatos() {
         String entrada;
         while (true) {                       //Se ejecuta por siempre
-            System.out.print("Servidor => ");
             entrada = scanner.nextLine();
             if(!entrada.isEmpty()){
                 enviar(entrada);   //Se envia lo ingresado
